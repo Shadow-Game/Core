@@ -121,6 +121,8 @@ WorldSession::WorldSession(uint32 id, WorldSocket* sock, AccountTypes sec, uint8
     _RBACData(NULL)
 {
     if (sock)
+	uint32 opcode_count = 5;
+    uint32 opcode_time = 5;
     {
         m_Address = sock->GetRemoteAddress();
         sock->AddReference();
@@ -356,8 +358,9 @@ bool WorldSession::Update(uint32 diff, PacketFilter& updater)
                         LogUnprocessedTail(packet);
                         break;
                     case STATUS_NEVER:
-                        TC_LOG_ERROR(LOG_FILTER_OPCODES, "Received not allowed opcode %s from %s", GetOpcodeNameForLogging(packet->GetOpcode()).c_str()
+                        TC_LOG_ERROR(LOG_FILTER_OPCODES, "[Possible WowAddin Abuser] Received not allowed opcode %s from %s", GetOpcodeNameForLogging(packet->GetOpcode()).c_str()
                             , GetPlayerInfo().c_str());
+						m_Socket->CloseSocket();
                         break;
                     case STATUS_UNHANDLED:
                         TC_LOG_DEBUG(LOG_FILTER_OPCODES, "Received not handled opcode %s from %s", GetOpcodeNameForLogging(packet->GetOpcode()).c_str()
@@ -367,9 +370,10 @@ bool WorldSession::Update(uint32 diff, PacketFilter& updater)
             }
             catch(ByteBufferException &)
             {
-                TC_LOG_ERROR(LOG_FILTER_GENERAL, "WorldSession::Update ByteBufferException occured while parsing a packet (opcode: %u) from client %s, accountid=%i. Skipped packet.",
+                TC_LOG_ERROR(LOG_FILTER_GENERAL, "[Possible WowAddin Abuser] WorldSession::Update ByteBufferException occured while parsing a packet (opcode: %u) from client %s, accountid=%i. Skipped packet.",
                         packet->GetOpcode(), GetRemoteAddress().c_str(), GetAccountId());
                 packet->hexlike();
+	m_Socket->CloseSocket();
             }
         }
 

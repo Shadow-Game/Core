@@ -240,6 +240,10 @@ void WorldSession::HandleCharEnum(PreparedQueryResult result)
 
 void WorldSession::HandleCharEnumOpcode(WorldPacket & /*recvData*/)
 {
+	uint32 opcode_count = 50; 
+    uint32 opcode_time = 3000;
+
+	time_t opcode_cur_time = time(NULL);
     // remove expired bans
     PreparedStatement* stmt = CharacterDatabase.GetPreparedStatement(CHAR_DEL_EXPIRED_BANS);
     CharacterDatabase.Execute(stmt);
@@ -758,7 +762,8 @@ void WorldSession::HandlePlayerLoginOpcode(WorldPacket& recvData)
 {
     if (PlayerLoading() || GetPlayer() != NULL)
     {
-        TC_LOG_ERROR(LOG_FILTER_NETWORKIO, "Player tryes to login again, AccountId = %d", GetAccountId());
+        TC_LOG_ERROR(LOG_FILTER_NETWORKIO, "[WowAddin]Igrach se opita da vleze otnovo v edna i sushta sesiq. Account ID = %d", GetAccountId());
+   KickPlayer();
         return;
     }
 
