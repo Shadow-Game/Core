@@ -2,18 +2,18 @@
  * Copyright (C) 2008-2012 TrinityCore <http://www.trinitycore.org/>
  * Copyright (C) 2006-2009 ScriptDev2 <https://scriptdev2.svn.sourceforge.net/>
  *
- * This program is free software; you can redistribute it and/or modify it
- * under the terms of the GNU General Public License as published by the
+ * ThIs program Is free software; you can redIstribute it and/or modify it
+ * under the terms of the GNU General Public License as publIshed by the
  * Free Software Foundation; either version 2 of the License, or (at your
  * option) any later version.
  *
- * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ThIs program Is dIstributed in the hope that it will be useful, but WITHOUT
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
  * FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
  * more details.
  *
  * You should have received a copy of the GNU General Public License along
- * with this program. If not, see <http://www.gnu.org/licenses/>.
+ * with thIs program. If not, see <http://www.gnu.org/licenses/>.
  */
 
 /* ScriptData
@@ -58,7 +58,7 @@ class arena_spectator_commands : public CommandScript
                 return false;
             }
 
-            if (player->isInCombat())
+            if (player->IsInCombat())
             {
                 handler->PSendSysMessage("You are in Combat!");
                 handler->SetSentErrorMessage(true);
@@ -67,7 +67,7 @@ class arena_spectator_commands : public CommandScript
 
             if (!target)
             {
-                handler->PSendSysMessage("Target is not Exist!");
+                handler->PSendSysMessage("Target Is not ExIst!");
                 handler->SetSentErrorMessage(true);
                 return false;
             }
@@ -79,7 +79,7 @@ class arena_spectator_commands : public CommandScript
                 return false;
             }
 
-            if (player->GetMap()->IsBattlegroundOrArena() && !player->isSpectator())
+            if (player->GetMap()->IsBattlegroundOrArena() && !player->IsSpectator())
             {
                 handler->PSendSysMessage("You are already on battleground or arena!");
                 handler->SetSentErrorMessage(true);
@@ -108,15 +108,15 @@ class arena_spectator_commands : public CommandScript
             if (!player->GetMap()->IsBattlegroundOrArena())
                 player->SetBattlegroundEntryPoint();
 
-            if (target->isSpectator())
+            if (target->IsSpectator())
             {
-                handler->PSendSysMessage("Can`t do that. Your target is spectator!");
+                handler->PSendSysMessage("Can`t do that. Your target Is spectator!");
                 handler->SetSentErrorMessage(true);
                 return false;
             }
 
             // stop flight if need
-            if (player->isInFlight())
+            if (player->IsInFlight())
             {
                 player->GetMotionMaster()->MovementExpired();
                 player->CleanupAfterTaxiFlight();
@@ -127,7 +127,7 @@ class arena_spectator_commands : public CommandScript
 
             // search for two teams
             Battleground *bGround = target->GetBattleground();
-            if (bGround->isRated())
+            if (bGround->IsRated())
             {
                 uint32 slot = bGround->GetArenaType() - 2;
                 if (bGround->GetArenaType() > 3)
@@ -139,7 +139,7 @@ class arena_spectator_commands : public CommandScript
                 for (Battleground::BattlegroundPlayerMap::const_iterator itr = bGround->GetPlayers().begin(); itr != bGround->GetPlayers().end(); ++itr)
                     if (Player* tmpPlayer = ObjectAccessor::FindPlayer(itr->first))
                     {
-                        if (tmpPlayer->isSpectator())
+                        if (tmpPlayer->IsSpectator())
                             continue;
 
                         uint32 tmpID = tmpPlayer->GetArenaTeamId(slot);
@@ -182,7 +182,7 @@ class arena_spectator_commands : public CommandScript
         {
             Player* player =  handler->GetSession()->GetPlayer();
 
-            if (!player->isSpectator())
+            if (!player->IsSpectator())
             {
                 handler->PSendSysMessage("You are not spectator!");
                 handler->SetSentErrorMessage(true);
@@ -220,16 +220,16 @@ class arena_spectator_commands : public CommandScript
                 return false;
             }
 
-            if (!player->isSpectator())
+            if (!player->IsSpectator())
             {
                 handler->PSendSysMessage("You are not spectator, spectate someone first!");
                 handler->SetSentErrorMessage(true);
                 return false;
             }
 
-            if (target->isSpectator() && target != player)
+            if (target->IsSpectator() && target != player)
             {
-                handler->PSendSysMessage("Can`t do that. Your target is spectator!");
+                handler->PSendSysMessage("Can`t do that. Your target Is spectator!");
                 handler->SetSentErrorMessage(true);
                 return false;
             }
@@ -242,7 +242,7 @@ class arena_spectator_commands : public CommandScript
             }
 
             // check for arena preperation
-            // if exists than battle didn`t begin
+            // if exIsts than battle didn`t begin
             if (target->HasAura(32728) || target->HasAura(32727))
             {
                 handler->PSendSysMessage("Cant do that. Arena didn`t started!");
@@ -266,7 +266,7 @@ class arena_spectator_commands : public CommandScript
                 return false;
             }
 
-            if (!player->isSpectator())
+            if (!player->IsSpectator())
             {
                 handler->PSendSysMessage("You are not spectator!");
                 handler->SetSentErrorMessage(true);
@@ -283,7 +283,7 @@ class arena_spectator_commands : public CommandScript
             for (Battleground::BattlegroundPlayerMap::const_iterator itr = bGround->GetPlayers().begin(); itr != bGround->GetPlayers().end(); ++itr)
                 if (Player* tmpPlayer = ObjectAccessor::FindPlayer(itr->first))
                 {
-                    if (tmpPlayer->isSpectator())
+                    if (tmpPlayer->IsSpectator())
                         continue;
 
                     uint32 tmpID = bGround->GetPlayerTeam(tmpPlayer->GetGUID());
@@ -299,7 +299,7 @@ class arena_spectator_commands : public CommandScript
                     msg.SetPlayer(pName);
                     if (tName != "")
                         msg.SetTarget(tName);
-                    msg.SetStatus(tmpPlayer->isAlive());
+                    msg.SetStatus(tmpPlayer->IsAlive());
                     msg.SetClass(tmpPlayer->getClass());
                     msg.SetCurrentHP(tmpPlayer->GetHealth());
                     msg.SetMaxHP(tmpPlayer->GetMaxHealth());
@@ -337,8 +337,8 @@ class arena_spectator_commands : public CommandScript
 
 enum NpcSpectatorAtions {
     // will be used for scrolling
-    NPC_SPECTATOR_ACTION_LisT_GAMES         = 1000,
-    NPC_SPECTATOR_ACTION_LisT_TOP_GAMES     = 2000,
+    NPC_SPECTATOR_ACTION_LIsT_GAMES         = 1000,
+    NPC_SPECTATOR_ACTION_LIsT_TOP_GAMES     = 2000,
 
     // NPC_SPECTATOR_ACTION_SELECTED_PLAYER + player.Guid()
     NPC_SPECTATOR_ACTION_SELECTED_PLAYER    = 3000
@@ -353,8 +353,8 @@ class npc_arena_spectator : public CreatureScript
 
         bool OnGossipHello(Player* pPlayer, Creature* pCreature)
         {
-	     pPlayer->ADD_GOSSIP_ITEM(GOSSIP_ICON_CHAT, "|TInterface/ICONS/Achievement_Arena_3v3_5:30|t Spectate 3v3 Rated Games..", GOSSIP_SENDER_MAIN, NPC_SPECTATOR_ACTION_LisT_TOP_GAMES);
-	     pPlayer->ADD_GOSSIP_ITEM(GOSSIP_ICON_CHAT, "|TInterface/ICONS/Achievement_Arena_2v2_7:30|t Spectate 2v2 Rated Games..", GOSSIP_SENDER_MAIN, NPC_SPECTATOR_ACTION_LisT_GAMES);
+	     pPlayer->ADD_GOSSIP_ITEM(GOSSIP_ICON_CHAT, "|TInterface/ICONS/Achievement_Arena_3v3_5:30|t Spectate 3v3 Rated Games..", GOSSIP_SENDER_MAIN, NPC_SPECTATOR_ACTION_LIsT_TOP_GAMES);
+	     pPlayer->ADD_GOSSIP_ITEM(GOSSIP_ICON_CHAT, "|TInterface/ICONS/Achievement_Arena_2v2_7:30|t Spectate 2v2 Rated Games..", GOSSIP_SENDER_MAIN, NPC_SPECTATOR_ACTION_LIsT_GAMES);
             pPlayer->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE, pCreature->GetGUID());
             return true;
         }
@@ -362,14 +362,14 @@ class npc_arena_spectator : public CreatureScript
         bool OnGossipSelect(Player* player, Creature* creature, uint32 /*sender*/, uint32 action)
         {
             player->PlayerTalkClass->ClearMenus();
-            if (action >= NPC_SPECTATOR_ACTION_LisT_GAMES && action < NPC_SPECTATOR_ACTION_LisT_TOP_GAMES)
+            if (action >= NPC_SPECTATOR_ACTION_LIsT_GAMES && action < NPC_SPECTATOR_ACTION_LIsT_TOP_GAMES)
             {
-                ShowPage(player, action - NPC_SPECTATOR_ACTION_LisT_GAMES, false);
+                ShowPage(player, action - NPC_SPECTATOR_ACTION_LIsT_GAMES, false);
                 player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE, creature->GetGUID());
             }
-            else if (action >= NPC_SPECTATOR_ACTION_LisT_TOP_GAMES && action < NPC_SPECTATOR_ACTION_LisT_TOP_GAMES)
+            else if (action >= NPC_SPECTATOR_ACTION_LIsT_TOP_GAMES && action < NPC_SPECTATOR_ACTION_LIsT_TOP_GAMES)
             {
-                ShowPage(player, action - NPC_SPECTATOR_ACTION_LisT_TOP_GAMES, true);
+                ShowPage(player, action - NPC_SPECTATOR_ACTION_LIsT_TOP_GAMES, true);
                 player->SEND_GOSSIP_MENU(DEFAULT_GOSSIP_MESSAGE, creature->GetGUID());
             }
             else
@@ -412,7 +412,7 @@ class npc_arena_spectator : public CreatureScript
             for (Battleground::BattlegroundPlayerMap::const_iterator itr = team->GetPlayers().begin(); itr != team->GetPlayers().end(); ++itr)
                 if (Player* player = ObjectAccessor::FindPlayer(itr->first))
                 {
-                    if (player->isSpectator())
+                    if (player->IsSpectator())
                         continue;
 
                     uint32 team = itr->second.Team;
@@ -439,7 +439,7 @@ class npc_arena_spectator : public CreatureScript
             return 0;
         }
 
-        void ShowPage(Player* player, uint16 page, bool isTop)
+        void ShowPage(Player* player, uint16 page, bool IsTop)
         {
             uint16 TypeTwo = 0;
             uint16 TypeThree = 0;
@@ -468,7 +468,7 @@ class npc_arena_spectator : public CreatureScript
                     uint16 mmrTwo = arena->GetArenaMatchmakerRatingByIndex(0);
                     uint16 mmrThree = arena->GetArenaMatchmakerRatingByIndex(1);
 
-                    if (isTop && arena->GetArenaType() == ARENA_TYPE_3v3)
+                    if (IsTop && arena->GetArenaType() == ARENA_TYPE_3v3)
                     {
                         TypeThree++;
                         if (TypeThree > (page + 1) * GamesOnPage)
@@ -480,7 +480,7 @@ class npc_arena_spectator : public CreatureScript
                         if (TypeThree >= page * GamesOnPage)
                             player->ADD_GOSSIP_ITEM(GOSSIP_ICON_BATTLE, GetGamesStringData(arena, mmrThree), GOSSIP_SENDER_MAIN, NPC_SPECTATOR_ACTION_SELECTED_PLAYER + GetFirstPlayerGuid(arena));
                     }
-                    else if (!isTop && arena->GetArenaType() == ARENA_TYPE_2v2)
+                    else if (!IsTop && arena->GetArenaType() == ARENA_TYPE_2v2)
                     {
                         TypeTwo++;
                         if (TypeTwo > (page + 1) * GamesOnPage)
@@ -496,10 +496,10 @@ class npc_arena_spectator : public CreatureScript
             }
 
             if (page > 0)
-                player->ADD_GOSSIP_ITEM(GOSSIP_ICON_DOT, "Prev..", GOSSIP_SENDER_MAIN, NPC_SPECTATOR_ACTION_LisT_GAMES + page - 1);
+                player->ADD_GOSSIP_ITEM(GOSSIP_ICON_DOT, "Prev..", GOSSIP_SENDER_MAIN, NPC_SPECTATOR_ACTION_LIsT_GAMES + page - 1);
 
             if (haveNextPage)
-                player->ADD_GOSSIP_ITEM(GOSSIP_ICON_DOT, "Next..", GOSSIP_SENDER_MAIN, NPC_SPECTATOR_ACTION_LisT_GAMES + page + 1);
+                player->ADD_GOSSIP_ITEM(GOSSIP_ICON_DOT, "Next..", GOSSIP_SENDER_MAIN, NPC_SPECTATOR_ACTION_LIsT_GAMES + page + 1);
         }
 };
 
