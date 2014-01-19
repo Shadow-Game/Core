@@ -1,5 +1,5 @@
 # Copyright (C) 2008-2013 Trinity <http://www.trinitycore.org/>
-#
+# ShadowCore
 # This file is free software; as a special exception the author gives
 # unlimited permission to copy and/or distribute it, with or without
 # modifications, as long as this notice is preserved.
@@ -19,8 +19,8 @@ if(NOT BUILDDIR)
 endif()
 
 if(NO_GIT)
-  set(rev_date "1970-01-01 00:00:00 +0000")
-  set(rev_hash "unknown")
+  set(rev_date "")
+  set(rev_hash "")
   set(rev_branch "Archived")
 else()
   if(GIT_EXEC)
@@ -58,9 +58,9 @@ else()
     # No valid ways available to find/set the revision/hash, so let's force some defaults
     message(STATUS "
     Could not find a proper repository signature (hash) - you may need to pull tags with git fetch -t
-    Continuing anyway - note that the versionstring will be set to \"unknown 1970-01-01 00:00:00 (Archived)"\")
-    set(rev_date "1970-01-01 00:00:00 +0000")
-    set(rev_hash "unknown")
+    Continuing anyway - note that the versionstring will be set to \""\")
+    set(rev_date "")
+    set(rev_hash "")
     set(rev_branch "Archived")
   else()
     # Extract information required to build a proper versionstring

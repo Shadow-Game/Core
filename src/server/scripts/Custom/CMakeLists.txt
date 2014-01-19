@@ -27,6 +27,7 @@ set(scripts_STAT_SRCS
   Custom/event.cpp
   Custom/Enchanter.cpp
   Custom/chat.cpp
+  Custom/DuelCD.cpp
 )
 
 message("  -> Prepared: Custom")

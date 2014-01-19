@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2008-2013 TrinityCore <http://www.trinitycore.org/>
- *
+ * Shadow-Game
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
  * Free Software Foundation; either version 2 of the License, or (at your
@@ -1318,6 +1318,7 @@ void AddSC_chatcommand();
 void AddSC_Arena_Scripts();
 void AddSC_Professions_NPC();
 void AddSC_npc_arena_setup();
+void AddSC_Shadow_Reset();
 #endif
 
 void AddCustomScripts()
@@ -1343,5 +1344,6 @@ void AddCustomScripts()
 	AddSC_Arena_Scripts();
 	AddSC_Professions_NPC();
 	AddSC_npc_arena_setup();
+	AddSC_Shadow_Reset();
 #endif
 }

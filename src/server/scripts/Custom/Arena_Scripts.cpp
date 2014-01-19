@@ -1,4 +1,4 @@
-//by SymbolixDEV
+//ShadowCore
 #include "ScriptPCH.h"
 
 class Arena_Scripts : public PlayerScript
@@ -19,23 +19,23 @@ public:
 		{
 		case CLASS_MAGE:
 			{
-				if (zone == 3698) // Nagrand Arena.
+				if (zone == 3698) // Nagrand Arena. ShadowCore
 				{
 					player->SummonGameObject(193061, x, y, z, ang, 0, 0, rot2, rot3, 30);
 				}
-				if (zone == 3702) // Blade's Edge Arena.
+				if (zone == 3702) // Blade's Edge Arena. ShadowCore
 				{
 					player->SummonGameObject(193061, x, y, z, ang, 0, 0, rot2, rot3, 30);
 				}
-				if (zone == 4378) // Dalaran Arena.
+				if (zone == 4378) // Dalaran Arena. ShadowCore
 				{
 					player->SummonGameObject(193061, x, y, z, ang, 0, 0, rot2, rot3, 30);
 				}
-				if (zone == 3968) // Ruins of Lordaeron.
+				if (zone == 3968) // Ruins of Lordaeron. ShadowCore
 				{
 					player->SummonGameObject(193061, x, y, z, ang, 0, 0, rot2, rot3, 30);
 				}
-				if (zone == 4406) // Ring of Valor.
+				if (zone == 4406) // Ring of Valor. ShadowCore
 				{
 					player->SummonGameObject(193061, x, y, z, ang, 0, 0, rot2, rot3, 30);
 				}
@@ -44,23 +44,23 @@ public:
 		
 		case CLASS_WARLOCK:
 			{
-				if (zone == 3698) // Nagrand Arena.
+				if (zone == 3698) // Nagrand Arena. ShadowCore
 				{
 					player->SummonGameObject(193169, x, y, z, ang, 0, 0, rot2, rot3, 30);
 				}
-				if (zone == 3702) // Blade's Edge Arena.
+				if (zone == 3702) // Blade's Edge Arena. ShadowCore
 				{
 					player->SummonGameObject(193169, x, y, z, ang, 0, 0, rot2, rot3, 30);
 				}
-				if (zone == 4378) // Dalaran Arena.
+				if (zone == 4378) // Dalaran Arena. ShadowCore 
 				{
 					player->SummonGameObject(193169, x, y, z, ang, 0, 0, rot2, rot3, 30);
 				}
-				if (zone == 3968) // Ruins of Lordaeron.
+				if (zone == 3968) // Ruins of Lordaeron. ShadowCore
 				{
 					player->SummonGameObject(193169, x, y, z, ang, 0, 0, rot2, rot3, 30);
 				}
-			if (zone == 4406) // Ring of Valor.
+			if (zone == 4406) // Ring of Valor. ShadowCore
 			{
 				player->SummonGameObject(193169, x, y, z, ang, 0, 0, rot2, rot3, 30);
 			}

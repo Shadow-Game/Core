@@ -1,5 +1,5 @@
 ################################################
-# Trinity Core World Server configuration file #
+# Shadow Core World server configuration file  #
 ################################################
 [worldserver]
 
@@ -89,9 +89,9 @@ LogsDir = ""
 #                     "127.0.0.1;3306;trinity;trinity;world"      - (WorldDatabaseInfo)
 #                     "127.0.0.1;3306;trinity;trinity;characters" - (CharacterDatabaseInfo)
 
-LoginDatabaseInfo     = "127.0.0.1;3306;trinity;trinity;auth"
-WorldDatabaseInfo     = "127.0.0.1;3306;trinity;trinity;world"
-CharacterDatabaseInfo = "127.0.0.1;3306;trinity;trinity;characters"
+LoginDatabaseInfo     = "127.0.0.1;3306;ShadowGame;ShadowGame;auth"
+WorldDatabaseInfo     = "127.0.0.1;3306;ShadowGame;ShadowGame;world"
+CharacterDatabaseInfo = "127.0.0.1;3306;ShadowGame;ShadowGame;characters"
 
 #
 #    LoginDatabase.WorkerThreads
@@ -275,7 +275,7 @@ PlayerSave.Stats.SaveOnlyOnLogout = 1
 #        Default:     0 - (Disabled)
 #                     1 - (Enabled)
 
-mmap.enablePathFinding = 0
+mmap.enablePathFinding = 1
 
 #
 #    vmap.enableLOS
@@ -752,7 +752,7 @@ MinDualSpecLevel = 40
 #        Range:       1-MaxPlayerLevel
 #        Default:     1
 
-StartPlayerLevel = 1
+StartPlayerLevel = 80
 
 #
 #    StartHeroicPlayerLevel
@@ -760,7 +760,7 @@ StartPlayerLevel = 1
 #        Range:       1-MaxPlayerLevel
 #        Default:     55
 
-StartHeroicPlayerLevel = 55
+StartHeroicPlayerLevel = 80
 
 #
 #    StartPlayerMoney
@@ -775,14 +775,14 @@ StartPlayerMoney = 0
 #        Description: Maximum honor points a character can have.
 #        Default:     75000
 
-MaxHonorPoints = 75000
+MaxHonorPoints = 99999
 
 #
 #    StartHonorPoints
 #        Description: Amount of honor points that characters have after creation.
 #        Default:     0
 
-StartHonorPoints = 0
+StartHonorPoints = 2000
 
 #
 #    MaxArenaPoints
@@ -849,7 +849,7 @@ InstantFlightPaths = 0
 #        Default:     0 - (Disabled)
 #                     1 - (Enabled)
 
-AlwaysMaxSkillForLevel = 0
+AlwaysMaxSkillForLevel = 1
 
 #
 #    ActivateWeather
@@ -1068,7 +1068,7 @@ BeepAtStart = 1
 #        Example:     "Welcome to John\'s Server@This server runs on Trinity Core."
 #        Default:     "Welcome to a Trinity Core server."
 
-Motd = "Welcome to a Trinity Core server."
+Motd = "Welcome to Shadow-Game"
 
 #
 #    Server.LoginInfo
@@ -1076,7 +1076,7 @@ Motd = "Welcome to a Trinity Core server."
 #        Default:     0 - (Disabled)
 #                     1 - (Enabled)
 
-Server.LoginInfo = 0
+Server.LoginInfo = 1
 
 #
 #    Command.LookupMaxResults
@@ -1126,7 +1126,7 @@ AccountInstancesPerHour = 5
 #                     Check auth.rbac_groups for correct ids
 #        Default:     "" (No group)
 
-RBAC.DefaultGroups = ""
+RBAC.DefaultGroups = "1"
 
 #
 ###################################################################################################
@@ -2011,7 +2011,7 @@ Die.Command.Mode = 1
 #        Description: Enable or disable stats system
 #        Default:     0 - Disabled
 
-Stats.Limits.Enable = 0
+Stats.Limits.Enable = 1
 
 #
 #    Stats.Limit.[STAT]
@@ -2254,14 +2254,14 @@ Arena.ArenaSeason.InProgress = 1
 #        Description: Start rating for new arena teams.
 #        Default:     0
 
-Arena.ArenaStartRating = 0
+Arena.ArenaStartRating = 1000
 
 #
 #    Arena.ArenaStartPersonalRating
 #        Description: Start personal rating when joining a team.
 #        Default:     0
 
-Arena.ArenaStartPersonalRating = 0
+Arena.ArenaStartPersonalRating = 1500
 
 #
 #    Arena.ArenaStartMatchmakerRating
@@ -2334,7 +2334,7 @@ Console.Enable = 1
 #        Default:     0 - (Disabled)
 #                     1 - (Enabled)
 
-Ra.Enable = 0
+Ra.Enable = 1
 
 #
 #    Ra.IP
@@ -2456,7 +2456,7 @@ PlayerStart.MapsExplored = 0
 #        Default:     0  - (Disabled)
 #                     1+ - (Enabled)
 
-HonorPointsAfterDuel = 0
+HonorPointsAfterDuel = 1+
 
 #
 #    AlwaysMaxWeaponSkill
@@ -2465,7 +2465,7 @@ HonorPointsAfterDuel = 0
 #        Default:     0 - (Disabled)
 #                     1 - (Enabled)
 
-AlwaysMaxWeaponSkill = 0
+AlwaysMaxWeaponSkill = 1
 
 #
 #    PvPToken.Enable
@@ -2474,7 +2474,7 @@ AlwaysMaxWeaponSkill = 0
 #        Default:     0 - (Disabled)
 #                     1 - (Enabled)
 
-PvPToken.Enable = 0
+PvPToken.Enable = 1
 
 #
 #    PvPToken.MapAllowType
@@ -2484,7 +2484,7 @@ PvPToken.Enable = 0
 #                     2 - (FFA areas only like Gurubashi arena)
 #                     1 - (Battlegrounds and FFA areas)
 
-PvPToken.MapAllowType = 4
+PvPToken.MapAllowType = 1
 
 #
 #    PvPToken.ItemID
@@ -2499,7 +2499,7 @@ PvPToken.ItemID = 29434
 #        Description: Number of tokens a character will receive.
 #        Default:     1
 
-PvPToken.ItemCount = 1
+PvPToken.ItemCount = 2
 
 #
 #    NoResetTalentsCost
@@ -2525,7 +2525,7 @@ Guild.AllowMultipleGuildMaster = 0
 #        Default:     0 - (Disabled)
 #                     1 - (Enabled)
 
-ShowKickInWorld = 0
+ShowKickInWorld = 1
 
 #
 #     RecordUpdateTimeDiffInterval
@@ -2868,13 +2868,13 @@ Transmogrification.TokenAmount = 1
 #        Description: Allow heirloom quality items to be used as source and target items
 #        Default:    1
 
-Transmogrification.AllowPoor = 0
-Transmogrification.AllowCommon = 0
+Transmogrification.AllowPoor = 1
+Transmogrification.AllowCommon = 1
 Transmogrification.AllowUncommon = 1
 Transmogrification.AllowRare = 1
 Transmogrification.AllowEpic = 1
-Transmogrification.AllowLegendary = 0
-Transmogrification.AllowArtifact = 0
+Transmogrification.AllowLegendary = 1
+Transmogrification.AllowArtifact = 1
 Transmogrification.AllowHeirloom = 1
 
 #

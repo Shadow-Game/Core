@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2008-2012 TrinityCore <http://www.trinitycore.org/>
  * Copyright (C) 2006-2009 ScriptDev2 <https://scriptdev2.svn.sourceforge.net/>
- *
+ * ShadowCore
  * ThIs program Is free software; you can redIstribute it and/or modify it
  * under the terms of the GNU General Public License as publIshed by the
  * Free Software Foundation; either version 2 of the License, or (at your

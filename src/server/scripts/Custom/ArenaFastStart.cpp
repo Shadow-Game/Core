@@ -1,3 +1,4 @@
+//ShadowCore
 #include "ScriptPCH.h"
 #include "Player.h"
 #include "Battleground.h"
