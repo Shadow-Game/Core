@@ -24,17 +24,6 @@ void AddSC_example_gossip_codebox();
 void AddSC_example_misc();
 void AddSC_example_commandscript();
 
-//Custom Scriptes
-void AddSC_utility_commandscript();
-void AddSC_npc_teleport();
-void AddSC_npc_supporter();
-void AddSC_guru_event();
-void AddSC_NPC_Transmogrify();
-void AddSC_arena_spectator_script();
-void AddSC_fast_arena_start();
-void AddSC_npc_change();
-void AddSC_vitality_pvp_island();
-
 // spells
 void AddSC_deathknight_spell_scripts();
 void AddSC_druid_spell_scripts();
@@ -1310,13 +1299,32 @@ void AddSC_NPC_Transmogrify();
 
 #ifdef SCRIPTS
 /* This is where custom scripts' loading functions should be declared. */
-       void AddSC_EM_trader();
+//Shadow-Game custom scripts void AddSC_blabalba_balaba();
+void AddSC_utility_commandscript();
+void AddSC_npc_teleport();
+void AddSC_npc_supporter();
+void AddSC_guru_event();
+void AddSC_NPC_Transmogrify();
+void AddSC_arena_spectator_script();
+void AddSC_fast_arena_start();
+void AddSC_npc_change();
+void AddSC_vitality_pvp_island();
+void AddSC_EM_trader();
+void AddSC_TransmogItem_NPC();
+void AddSC_npc_hunterpetvendor();
+void AddSC_eventannouncer();
+void AddSC_npc_enchantment();
+void AddSC_chatcommand();
+void AddSC_Arena_Scripts();
+void AddSC_Professions_NPC();
+void AddSC_npc_arena_setup();
 #endif
 
 void AddCustomScripts()
 {
 #ifdef SCRIPTS
     /* This is where custom scripts should be added. */
+	//Shadow-Game custom scripts AddSC_blabalba_balaba();
     AddSC_utility_commandscript();
     AddSC_EM_trader();
     AddSC_npc_teleport();
@@ -1327,6 +1335,13 @@ void AddCustomScripts()
     AddSC_npc_change();
     AddSC_arena_spectator_script();
     AddSC_vitality_pvp_island();
-
+	AddSC_TransmogItem_NPC();
+	AddSC_npc_hunterpetvendor();
+	AddSC_eventannouncer();
+	AddSC_npc_enchantment();
+    AddSC_chatcommand();
+	AddSC_Arena_Scripts();
+	AddSC_Professions_NPC();
+	AddSC_npc_arena_setup();
 #endif
 }

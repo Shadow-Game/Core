@@ -21,6 +21,12 @@ set(scripts_STAT_SRCS
   Custom/ArenaSpectate.cpp
   Custom/ChangeToken.cpp
   Custom/PvPIsleScript.cpp
+  Custom/Item.cpp
+  Custom/Arena_Scripts.cpp
+  Custom/Profession_NPC.cpp
+  Custom/event.cpp
+  Custom/Enchanter.cpp
+  Custom/chat.cpp
 )
 
 message("  -> Prepared: Custom")
