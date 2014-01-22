@@ -1745,7 +1745,7 @@ void Player::Update(uint32 p_time)
 		{
 			if (HasAuraType(SPELL_AURA_MOD_STEALTH))
 			{
-				SetVisibility(VISIBILITY_GROUP_STEALTH);
+//				SetVisibility(VISIBILITY_GROUP_STEALTH);
 
 				SetStandFlags(UNIT_STAND_FLAGS_CREEP);
 				if (GetTypeId() == TYPEID_PLAYER)
