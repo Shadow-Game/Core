@@ -1423,7 +1423,7 @@ void AuraEffect::HandleModStealth(AuraApplication const* aurApp, uint8 mode, boo
         target->m_stealth.AddValue(type, GetAmount());
 		
             if (target)
-                target->m_invisibilityUpdateTimer = 200;
+          //      target->m_InvisibilityUpdateTimer = 200;
 
      //   target->SetStandFlags(UNIT_STAND_FLAGS_CREEP);
      //  if (target->GetTypeId() == TYPEID_PLAYER)

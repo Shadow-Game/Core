@@ -2790,7 +2790,6 @@ void SpellMgr::LoadSpellCustomAttr()
 			    spellInfo->AttributesCu |= SPELL_ATTR0_CANT_INSTANT_SHOP;
 				break;
 			case 2094: // Blind
-			case 42950: // Dragon Breath
 			case 8643: // Kidney  shot
 			case 1833: // cheap shot
 			case 12355: //  Impact

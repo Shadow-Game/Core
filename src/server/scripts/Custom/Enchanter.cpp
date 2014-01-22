@@ -962,10 +962,10 @@ public:
                     player->PlayerTalkClass->SendCloseGossip();
                     break;
 				case 205:
-					Enchant(player, player->GetItemByPos(INVENTORY_SLOT_BAG_0, EQUIPMENT_SLOT_HANDS), ENCHANT_GLOVES_SP);
-                    player->PlayerTalkClass->SendCloseGossip();
-                    break;
-				case 300:
+//					Enchant(player, player->GetItemByPos(INVENTORY_SLOT_BAG_0, EQUIPMENT_SLOT_HANDS), ENCHANT_GLOVES_SP);
+      //              player->PlayerTalkClass->SendCloseGossip();
+   //                 break;
+		//		case 300:
 					{
 						player->ADD_GOSSIP_ITEM(1, "[Welcome to Enchanting NPC!]", GOSSIP_SENDER_MAIN, 0);
 						player->ADD_GOSSIP_ITEM(1, "[Enchant Weapon]", GOSSIP_SENDER_MAIN, 1);
