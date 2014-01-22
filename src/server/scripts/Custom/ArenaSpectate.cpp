@@ -127,7 +127,7 @@ class arena_spectator_commands : public CommandScript
 
             // search for two teams
             Battleground *bGround = target->GetBattleground();
-            if (bGround->IsRated())
+            if (bGround->isRated())
             {
                 uint32 slot = bGround->GetArenaType() - 2;
                 if (bGround->GetArenaType() > 3)
