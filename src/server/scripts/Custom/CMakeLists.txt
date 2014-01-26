@@ -28,6 +28,9 @@ set(scripts_STAT_SRCS
   Custom/Enchanter.cpp
   Custom/chat.cpp
   Custom/DuelCD.cpp
+  Custom/npc_arena_team_top.cpp
+  Custom/class.cpp
+  Custom/hunterpet_vendor.cpp
 )
 
 message("  -> Prepared: Custom")

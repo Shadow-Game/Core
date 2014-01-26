@@ -494,7 +494,7 @@ void AddSC_boss_marwyn();
 void AddSC_boss_lord_marrowgar();       // Icecrown Citadel
 void AddSC_boss_lady_deathwhisper();
 void AddSC_boss_deathbringer_saurfang();
-void AddSC_boss_gunship_battle();
+//void AddSC_boss_gunship_battle();
 void AddSC_boss_festergut();
 void AddSC_boss_rotface();
 void AddSC_boss_professor_putricide();
@@ -1236,7 +1236,7 @@ void AddNorthrendScripts()
     AddSC_boss_lord_marrowgar();        // Icecrown Citadel
     AddSC_boss_lady_deathwhisper();
     AddSC_boss_deathbringer_saurfang();
-    AddSC_boss_gunship_battle();
+//AddSC_boss_gunship_battle();
     AddSC_boss_festergut();
     AddSC_boss_rotface();
     AddSC_boss_professor_putricide();
@@ -1326,24 +1326,24 @@ void AddCustomScripts()
 #ifdef SCRIPTS
     /* This is where custom scripts should be added. */
 	//Shadow-Game custom scripts AddSC_blabalba_balaba();
-    AddSC_utility_commandscript();
-    AddSC_EM_trader();
-    AddSC_npc_teleport();
-    AddSC_npc_supporter();
-    AddSC_guru_event();
-    AddSC_NPC_Transmogrify();
-    AddSC_fast_arena_start();
-    AddSC_npc_change();
-    AddSC_arena_spectator_script();
-    AddSC_vitality_pvp_island();
-	AddSC_TransmogItem_NPC();
-	AddSC_npc_hunterpetvendor();
-	AddSC_eventannouncer();
-	AddSC_npc_enchantment();
-    AddSC_chatcommand();
-	AddSC_Arena_Scripts();
-	AddSC_Professions_NPC();
-	AddSC_npc_arena_setup();
-	AddSC_Shadow_Reset();
+AddSC_utility_commandscript();
+AddSC_npc_teleport();
+AddSC_npc_supporter();
+AddSC_guru_event();
+AddSC_NPC_Transmogrify();
+AddSC_arena_spectator_script();
+AddSC_fast_arena_start();
+AddSC_npc_change();
+AddSC_vitality_pvp_island();
+AddSC_EM_trader();
+AddSC_TransmogItem_NPC();
+AddSC_npc_hunterpetvendor();
+AddSC_eventannouncer();
+AddSC_npc_enchantment();
+AddSC_chatcommand();
+AddSC_Arena_Scripts();
+AddSC_Professions_NPC();
+AddSC_npc_arena_setup();
+AddSC_Shadow_Reset();
 #endif
 }
