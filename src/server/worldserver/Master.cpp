@@ -126,7 +126,7 @@ int Master::Run()
 
     TC_LOG_INFO(LOG_FILTER_WORLDSERVER, "%s (worldserver-daemon)", _FULLVERSION);
     TC_LOG_INFO(LOG_FILTER_WORLDSERVER, "<Ctrl-C> to stop.\n");
-	TC_LOG_INFO(LOG_FILTER_WORLDSERVER, "ShadowCore 3.3.5a Instant 80 Server");
+	TC_LOG_INFO(LOG_FILTER_WORLDSERVER, "Arena-Gaming Core 3.3.5a");
 
     /// worldserver PID file creation
     std::string pidfile = ConfigMgr::GetStringDefault("PidFile", "");

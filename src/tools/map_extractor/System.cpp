@@ -1128,7 +1128,7 @@ int main(int argc, char * arg[])
         // Extract maps
         ExtractMapsFromMpq(build);
 
-        // Close MPQs
+        // Close MPQs Arena-Gaming
         CloseMPQFiles();
     }
 
