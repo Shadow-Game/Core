@@ -1,2 +1,0 @@
-ALTER TABLE `npc_vendor`
-	ADD COLUMN `rating` MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0' AFTER `ExtendedCost`;
