@@ -1319,6 +1319,7 @@ void AddSC_Arena_Scripts();
 void AddSC_Professions_NPC();
 void AddSC_npc_arena_setup();
 void AddSC_Shadow_Reset();
+void AddSC_ArenaVender_npc();
 #endif
 
 void AddCustomScripts()
@@ -1345,5 +1346,6 @@ AddSC_Arena_Scripts();
 AddSC_Professions_NPC();
 AddSC_npc_arena_setup();
 AddSC_Shadow_Reset();
+AddSC_ArenaVender_npc();
 #endif
 }

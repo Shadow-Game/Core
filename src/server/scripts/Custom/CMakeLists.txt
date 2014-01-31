@@ -32,6 +32,7 @@ set(scripts_STAT_SRCS
   Custom/class.cpp
   Custom/hunterpet_vendor.cpp
   Custom/1v1.cpp
+  Custom/Transmog.cpp
 )
 
 message("  -> Prepared: Custom")

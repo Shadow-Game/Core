@@ -29,7 +29,7 @@ public:
  
                 if(handler->GetSession()->GetSecurity() >= SEC_PLAYER)
                 {
-                                  snprintf(message, 1024, "[Shadow-Game Chat][%s%s|r]: %s%s|r", MSG_COLOR_WHITE, handler->GetSession()->GetPlayer()->GetName().c_str(), MSG_COLOR_LIGHTBLUE, args);
+                                  snprintf(message, 1024, "[Chat][%s%s|r]: %s%s|r", MSG_COLOR_WHITE, handler->GetSession()->GetPlayer()->GetName().c_str(), MSG_COLOR_LIGHTBLUE, args);
                                 sWorld->SendServerMessage(SERVER_MSG_STRING, message, NULL);
     }
   return true;
